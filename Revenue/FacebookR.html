@@ -1,0 +1,85 @@
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+  
+  <head>
+    
+      <meta charset="utf-8">
+      <title>Bokeh Plot</title>
+      
+      
+        
+          
+        
+        
+          
+        <script type="text/javascript" src="https://cdn.bokeh.org/bokeh/release/bokeh-2.3.1.min.js" integrity="sha384-YF85VygJKMVnHE+lLv2AM93Vbstr0yo2TbIu5v8se5Rq3UQAUmcuh4aaJwNlpKwa" crossorigin="anonymous"></script>
+        <script type="text/javascript">
+            Bokeh.set_log_level("info");
+        </script>
+        
+      
+      
+    
+  </head>
+  
+  
+  <body>
+    
+      
+        
+          
+          
+            
+              <div class="bk-root" id="ca92a03e-c644-424b-a41a-98e2a93a4c28" data-root-id="1142"></div>
+            
+          
+        
+      
+      
+        <script type="application/json" id="1279">
+          {"1308dc1d-16d7-45c2-a3eb-550234d8a35a":{"defs":[],"roots":{"references":[{"attributes":{},"id":"1163","type":"SaveTool"},{"attributes":{},"id":"1186","type":"UnionRenderers"},{"attributes":{"data_source":{"id":"1141"},"glyph":{"id":"1175"},"hover_glyph":null,"muted_glyph":null,"nonselection_glyph":{"id":"1176"},"view":{"id":"1178"}},"id":"1177","type":"GlyphRenderer"},{"attributes":{},"id":"1164","type":"ResetTool"},{"attributes":{},"id":"1154","type":"CategoricalTicker"},{"attributes":{},"id":"1187","type":"Selection"},{"attributes":{"data":{"fiscalyears":["2011","2012","2013","2014","2015","2016","2017","2018","2019","2020"],"income":{"__ndarray__":"7FG4HoXrOUA9CtejcN1EQIXrUbgehUJA4XoUrkfBQ0BSuB6F67FKQLgehetR2EZAzczMzMwsSECkcD0K18NNQOF6FK5HoUtAFK5H4Xq0TEA=","dtype":"float64","order":"little","shape":[10]}},"selected":{"id":"1187"},"selection_policy":{"id":"1186"}},"id":"1141","type":"ColumnDataSource"},{"attributes":{"factors":["2011","2012","2013","2014","2015","2016","2017","2018","2019","2020"]},"id":"1145","type":"FactorRange"},{"attributes":{},"id":"1151","type":"LinearScale"},{"attributes":{},"id":"1183","type":"AllLabels"},{"attributes":{"fill_color":{"value":"#1f77b4"},"line_color":{"value":"#1f77b4"},"top":{"field":"income"},"width":{"value":0.6},"x":{"field":"fiscalyears"}},"id":"1175","type":"VBar"},{"attributes":{"axis":{"id":"1153"},"grid_line_color":null,"ticker":null},"id":"1155","type":"Grid"},{"attributes":{"end":100},"id":"1147","type":"Range1d"},{"attributes":{"fill_alpha":{"value":0.1},"fill_color":{"value":"#1f77b4"},"line_alpha":{"value":0.1},"line_color":{"value":"#1f77b4"},"top":{"field":"income"},"width":{"value":0.6},"x":{"field":"fiscalyears"}},"id":"1176","type":"VBar"},{"attributes":{},"id":"1180","type":"AllLabels"},{"attributes":{},"id":"1161","type":"WheelZoomTool"},{"attributes":{},"id":"1185","type":"BasicTickFormatter"},{"attributes":{"axis_label":"Fiscal Years","formatter":{"id":"1182"},"major_label_policy":{"id":"1180"},"ticker":{"id":"1154"}},"id":"1153","type":"CategoricalAxis"},{"attributes":{"axis_label":"Net income (in billion dollars)","formatter":{"id":"1185"},"major_label_policy":{"id":"1183"},"ticker":{"id":"1157"}},"id":"1156","type":"LinearAxis"},{"attributes":{"axis":{"id":"1156"},"dimension":1,"ticker":null},"id":"1159","type":"Grid"},{"attributes":{"bottom_units":"screen","fill_alpha":0.5,"fill_color":"lightgrey","left_units":"screen","level":"overlay","line_alpha":1.0,"line_color":"black","line_dash":[4,4],"line_width":2,"right_units":"screen","syncable":false,"top_units":"screen"},"id":"1166","type":"BoxAnnotation"},{"attributes":{"active_multi":null,"tools":[{"id":"1160"},{"id":"1161"},{"id":"1162"},{"id":"1163"},{"id":"1164"},{"id":"1165"}]},"id":"1167","type":"Toolbar"},{"attributes":{},"id":"1157","type":"BasicTicker"},{"attributes":{"source":{"id":"1141"}},"id":"1178","type":"CDSView"},{"attributes":{"below":[{"id":"1153"}],"center":[{"id":"1155"},{"id":"1159"}],"height":300,"left":[{"id":"1156"}],"renderers":[{"id":"1177"}],"title":{"id":"1143"},"toolbar":{"id":"1167"},"x_range":{"id":"1145"},"x_scale":{"id":"1149"},"y_range":{"id":"1147"},"y_scale":{"id":"1151"}},"id":"1142","subtype":"Figure","type":"Plot"},{"attributes":{"text":"Annual Revenue of Apple in the Past 10 Years"},"id":"1143","type":"Title"},{"attributes":{},"id":"1182","type":"CategoricalTickFormatter"},{"attributes":{},"id":"1149","type":"CategoricalScale"},{"attributes":{},"id":"1165","type":"HelpTool"},{"attributes":{},"id":"1160","type":"PanTool"},{"attributes":{"overlay":{"id":"1166"}},"id":"1162","type":"BoxZoomTool"}],"root_ids":["1142"]},"title":"Bokeh Application","version":"2.3.1"}}
+        </script>
+        <script type="text/javascript">
+          (function() {
+            var fn = function() {
+              Bokeh.safely(function() {
+                (function(root) {
+                  function embed_document(root) {
+                    
+                  var docs_json = document.getElementById('1279').textContent;
+                  var render_items = [{"docid":"1308dc1d-16d7-45c2-a3eb-550234d8a35a","root_ids":["1142"],"roots":{"1142":"ca92a03e-c644-424b-a41a-98e2a93a4c28"}}];
+                  root.Bokeh.embed.embed_items(docs_json, render_items);
+                
+                  }
+                  if (root.Bokeh !== undefined) {
+                    embed_document(root);
+                  } else {
+                    var attempts = 0;
+                    var timer = setInterval(function(root) {
+                      if (root.Bokeh !== undefined) {
+                        clearInterval(timer);
+                        embed_document(root);
+                      } else {
+                        attempts++;
+                        if (attempts > 100) {
+                          clearInterval(timer);
+                          console.log("Bokeh: ERROR: Unable to run BokehJS code because BokehJS library is missing");
+                        }
+                      }
+                    }, 10, root)
+                  }
+                })(window);
+              });
+            };
+            if (document.readyState != "loading") fn();
+            else document.addEventListener("DOMContentLoaded", fn);
+          })();
+        </script>
+    
+  </body>
+  
+</html>

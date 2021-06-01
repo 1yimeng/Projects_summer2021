@@ -1,0 +1,85 @@
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+  
+  <head>
+    
+      <meta charset="utf-8">
+      <title>Bokeh Plot</title>
+      
+      
+        
+          
+        
+        
+          
+        <script type="text/javascript" src="https://cdn.bokeh.org/bokeh/release/bokeh-2.3.2.min.js" integrity="sha384-XypntL49z55iwGVUW4qsEu83zKL3XEcz0MjuGOQ9SlaaQ68X/g+k1FcioZi7oQAc" crossorigin="anonymous"></script>
+        <script type="text/javascript">
+            Bokeh.set_log_level("info");
+        </script>
+        
+      
+      
+    
+  </head>
+  
+  
+  <body>
+    
+      
+        
+          
+          
+            
+              <div class="bk-root" id="ad85147d-9ea1-4f40-a1db-ca2910fad577" data-root-id="1338"></div>
+            
+          
+        
+      
+      
+        <script type="application/json" id="1475">
+          {"798650f7-f3cb-4941-b54c-9ed127892c01":{"defs":[],"roots":{"references":[{"attributes":{},"id":"1376","type":"AllLabels"},{"attributes":{},"id":"1378","type":"CategoricalTickFormatter"},{"attributes":{"fill_color":{"field":"x","transform":{"id":"1369"}},"line_color":{"value":"#1f77b4"},"top":{"field":"y"},"width":{"value":0.7},"x":{"field":"x"}},"id":"1371","type":"VBar"},{"attributes":{"axis_label":"Year","formatter":{"id":"1378"},"major_label_policy":{"id":"1376"},"ticker":{"id":"1349"}},"id":"1348","type":"CategoricalAxis"},{"attributes":{},"id":"1379","type":"AllLabels"},{"attributes":{"axis_label":"Percentage of Admission","formatter":{"id":"1381"},"major_label_policy":{"id":"1379"},"ticker":{"id":"1352"}},"id":"1351","type":"LinearAxis"},{"attributes":{"fill_alpha":{"value":0.1},"fill_color":{"field":"x","transform":{"id":"1369"}},"line_alpha":{"value":0.1},"line_color":{"value":"#1f77b4"},"top":{"field":"y"},"width":{"value":0.7},"x":{"field":"x"}},"id":"1372","type":"VBar"},{"attributes":{"active_multi":null,"tools":[{"id":"1355"},{"id":"1356"},{"id":"1357"},{"id":"1358"},{"id":"1359"},{"id":"1360"}]},"id":"1362","type":"Toolbar"},{"attributes":{},"id":"1381","type":"BasicTickFormatter"},{"attributes":{},"id":"1355","type":"PanTool"},{"attributes":{},"id":"1382","type":"Selection"},{"attributes":{"bottom_units":"screen","fill_alpha":0.5,"fill_color":"lightgrey","left_units":"screen","level":"overlay","line_alpha":1.0,"line_color":"black","line_dash":[4,4],"line_width":2,"right_units":"screen","syncable":false,"top_units":"screen"},"id":"1361","type":"BoxAnnotation"},{"attributes":{},"id":"1383","type":"UnionRenderers"},{"attributes":{},"id":"1352","type":"BasicTicker"},{"attributes":{},"id":"1356","type":"WheelZoomTool"},{"attributes":{"axis":{"id":"1348"},"grid_line_color":null,"ticker":null},"id":"1350","type":"Grid"},{"attributes":{},"id":"1346","type":"LinearScale"},{"attributes":{"data":{"x":[["2014","m"],["2014","f"],["2015","m"],["2015","f"],["2016","m"],["2016","f"],["2017","m"],["2017","f"],["2018","m"],["2018","f"],["2019","m"],["2019","f"],["2020","m"],["2020","f"]],"y":[54.4,45.6,45.8,54.2,44.53,55.47,47.33,52.67,46.71,53.29,55.0,45.0,45.63,54.36]},"selected":{"id":"1382"},"selection_policy":{"id":"1383"}},"id":"1336","type":"ColumnDataSource"},{"attributes":{"end":60},"id":"1342","type":"Range1d"},{"attributes":{"axis":{"id":"1351"},"dimension":1,"ticker":null},"id":"1354","type":"Grid"},{"attributes":{},"id":"1349","type":"CategoricalTicker"},{"attributes":{},"id":"1359","type":"ResetTool"},{"attributes":{},"id":"1344","type":"CategoricalScale"},{"attributes":{},"id":"1360","type":"HelpTool"},{"attributes":{"below":[{"id":"1348"}],"center":[{"id":"1350"},{"id":"1354"}],"height":300,"left":[{"id":"1351"}],"renderers":[{"id":"1373"}],"title":{"id":"1339"},"toolbar":{"id":"1362"},"width":800,"x_range":{"id":"1337"},"x_scale":{"id":"1344"},"y_range":{"id":"1342"},"y_scale":{"id":"1346"}},"id":"1338","subtype":"Figure","type":"Plot"},{"attributes":{},"id":"1358","type":"SaveTool"},{"attributes":{"factors":[["2014","m"],["2014","f"],["2015","m"],["2015","f"],["2016","m"],["2016","f"],["2017","m"],["2017","f"],["2018","m"],["2018","f"],["2019","m"],["2019","f"],["2020","m"],["2020","f"]]},"id":"1337","type":"FactorRange"},{"attributes":{"source":{"id":"1336"}},"id":"1374","type":"CDSView"},{"attributes":{"text":"Total Male vs. Female Enrollment at UofA Med by Year"},"id":"1339","type":"Title"},{"attributes":{"overlay":{"id":"1361"}},"id":"1357","type":"BoxZoomTool"},{"attributes":{"data_source":{"id":"1336"},"glyph":{"id":"1371"},"hover_glyph":null,"muted_glyph":null,"nonselection_glyph":{"id":"1372"},"view":{"id":"1374"}},"id":"1373","type":"GlyphRenderer"},{"attributes":{"end":2,"factors":["m","f"],"palette":["#718dbf","#e84d60"],"start":1},"id":"1369","type":"CategoricalColorMapper"}],"root_ids":["1338"]},"title":"Bokeh Application","version":"2.3.2"}}
+        </script>
+        <script type="text/javascript">
+          (function() {
+            var fn = function() {
+              Bokeh.safely(function() {
+                (function(root) {
+                  function embed_document(root) {
+                    
+                  var docs_json = document.getElementById('1475').textContent;
+                  var render_items = [{"docid":"798650f7-f3cb-4941-b54c-9ed127892c01","root_ids":["1338"],"roots":{"1338":"ad85147d-9ea1-4f40-a1db-ca2910fad577"}}];
+                  root.Bokeh.embed.embed_items(docs_json, render_items);
+                
+                  }
+                  if (root.Bokeh !== undefined) {
+                    embed_document(root);
+                  } else {
+                    var attempts = 0;
+                    var timer = setInterval(function(root) {
+                      if (root.Bokeh !== undefined) {
+                        clearInterval(timer);
+                        embed_document(root);
+                      } else {
+                        attempts++;
+                        if (attempts > 100) {
+                          clearInterval(timer);
+                          console.log("Bokeh: ERROR: Unable to run BokehJS code because BokehJS library is missing");
+                        }
+                      }
+                    }, 10, root)
+                  }
+                })(window);
+              });
+            };
+            if (document.readyState != "loading") fn();
+            else document.addEventListener("DOMContentLoaded", fn);
+          })();
+        </script>
+    
+  </body>
+  
+</html>
