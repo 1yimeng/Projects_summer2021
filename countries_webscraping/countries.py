@@ -1,6 +1,9 @@
 from bs4 import BeautifulSoup, Tag, NavigableString
 import requests
 import pandas as pd
+from bokeh.plotting import figure, show
+from bokeh.models import ColumnDataSource
+from bokeh.palettes import Spectral5
 
 COUNTRIES_URL = 'https://www.worldometers.info/geography/alphabetical-list-of-countries/'
 GDP_URL = 'https://www.worldometers.info/gdp/gdp-per-capita/'
@@ -43,22 +46,42 @@ for tr in table:
      my_tr = tr.find('a')
      if my_tr != -1:
           full_names.append(my_tr.text)
-          print(my_tr.text)
+          # print(my_tr.text) # countries
 
      if isinstance(tr, NavigableString):
           continue
      if isinstance(tr, Tag):
           until_position = len(tr.contents[5].text)
-          all_data.append(str(tr.contents[5].text[1:until_position - 1]))
+          processed = str(tr.contents[5].text[1:until_position - 1])
+          if processed != 'N.A.':
+               all_data.append(processed)
+          else:
+               all_data.append(str(0))
 
 # print(all_data)
 data = {'Country': full_names, 
         'GDP' : all_data}
 
-print(data)
-#columns is selecting which part of dictionary to include, names have to be the same
-df = pd.DataFrame(data, columns = ['Country', 'GDP']) 
+# print(data)
+# columns is selecting which part of dictionary to include, names have to be the same
+df = pd.DataFrame(data, columns = ['Country', 'GDP'])  
 df.to_csv('/Users/yimengwang/Documents/M2M/myproject/countries_webscraping/countryGDP_dataframe.csv', 
-          index = False, header = True)
+          index = False, header = True) #export as csv 
 
-print(df)
+df.index += 1
+
+# converting from dollar format to int for GDP data
+df[df.columns[1]] = df[df.columns[1]].replace('[\$,]', '', regex=True).astype(int)
+
+# graph top 10 countries
+# since it is already in sorted list, it becomes easy to graph them
+countries = df['Country'].tolist()[:9]
+GDPs = df['GDP'].tolist()[:9]
+source = ColumnDataSource(data=dict(countries=countries, GDPs=GDPs))
+visual = figure(title="Top 10 Countries with GDP (PPP) Per Capital in 2017", x_range=countries, 
+               y_range=(0,130000), x_axis_label = "Countries", y_axis_label = "GDP ($)", 
+               plot_height = 500, plot_width = 800)
+
+visual.vbar(x='countries', top='GDPs', width=0.8, source=source)
+visual.xgrid.grid_line_color = None
+show(visual)
