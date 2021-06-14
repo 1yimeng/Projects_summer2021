@@ -90,11 +90,11 @@ show(visual)
 
 # mean GDP calculation
 mean_GDP = df['GDP'].mean()
-print(f'The mean GDP of all countries is {mean_GDP}')
+print(f'The mean GDP of all countries is {mean_GDP}.')
 
 # median_GDP calculation and finding the countries below median GDP value
 median_GDP = df['GDP'].median()
-print(f'The median GDP of all countries is {median_GDP}')
+print(f'The median GDP of all countries is {median_GDP}.')
 
 less_than_median = df[(df.GDP < median_GDP)] 
 less_than_median = less_than_median['Country']
