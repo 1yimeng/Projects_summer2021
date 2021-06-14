@@ -33,6 +33,7 @@ response_countries = requests.get(COUNTRIES_URL)
 html_countries = response_countries.content
 soup_countries = BeautifulSoup(html_countries, 'html.parser')
 all_countries = country_total(soup_countries) # list of all countries
+print(f'The number of countries on Earth according to Wikipedia is {len(all_countries)}.')
 
 response_GDP = requests.get(GDP_URL)
 html_GDP = response_GDP.content
@@ -58,6 +59,7 @@ for tr in table:
           else:
                all_data.append(str(0))
 
+print(f'The number of countires we have data for is {len(full_names)}.')
 # print(all_data)
 data = {'Country': full_names, 
         'GDP' : all_data}
@@ -85,3 +87,15 @@ visual = figure(title="Top 10 Countries with GDP (PPP) Per Capital in 2017", x_r
 visual.vbar(x='countries', top='GDPs', width=0.8, source=source)
 visual.xgrid.grid_line_color = None
 show(visual)
+
+# mean GDP calculation
+mean_GDP = df['GDP'].mean()
+print(f'The mean GDP of all countries is {mean_GDP}')
+
+# median_GDP calculation and finding the countries below median GDP value
+median_GDP = df['GDP'].median()
+print(f'The median GDP of all countries is {median_GDP}')
+
+less_than_median = df[(df.GDP < median_GDP)] 
+less_than_median = less_than_median['Country']
+print(less_than_median)
