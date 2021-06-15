@@ -3,7 +3,6 @@ import requests
 import pandas as pd
 from bokeh.plotting import figure, show
 from bokeh.models import ColumnDataSource
-from bokeh.palettes import Spectral5
 
 COUNTRIES_URL = 'https://www.worldometers.info/geography/alphabetical-list-of-countries/'
 GDP_URL = 'https://www.worldometers.info/gdp/gdp-per-capita/'
