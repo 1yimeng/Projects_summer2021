@@ -97,4 +97,4 @@ print(f'The median GDP of all countries is {median_GDP}.')
 
 less_than_median = df[(df.GDP < median_GDP)] 
 less_than_median = less_than_median['Country']
-print(less_than_median)
+print(less_than_median) # countries names with GDP less than median
